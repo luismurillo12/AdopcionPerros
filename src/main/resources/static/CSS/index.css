@@ -1,0 +1,49 @@
+header{
+    background: #767B7F;
+    width: 100%;
+    clear: both;
+    display: table;
+}
+
+menu{
+width: 900px;
+margin: 0 auto;
+}
+
+ header img{
+     height: 50px;
+     width:  50px;
+     float: left;
+     padding: 5px;
+     margin-left: 1.5%;
+ }
+ 
+ nav{
+   float: left;  
+
+ }
+ 
+ nav ul li{
+     list-style: none;
+     margin-left:85px ;
+     padding: 12px 0;
+     float: left;
+     position:relative ;
+ }
+ nav ul li a{
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+
+ }
+
+ h1{
+     margin-left:150px ;
+     margin-top: 200px;
+ }
+
+ .parrafos{
+     margin-left: 200px;
+     
+ }
+
