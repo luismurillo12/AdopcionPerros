@@ -1,0 +1,51 @@
+
+header{
+    background: #767B7F;
+    width: 100%;
+    clear: both;
+    display: table;
+}
+header img{
+    height: 50px;
+    width:  50px;
+    float: left;
+    margin-left: 1.5%;
+    padding: 5px;
+}
+nav{
+    float: left;  
+
+ 
+  }
+  
+  nav ul li{
+      list-style: none;
+      margin-left:85px ;
+      padding: 12px 0;
+      float: left;
+      position:relative ;
+  }
+  nav ul li a{
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+ 
+  }
+  
+  .filtros{
+      display: flex;
+  }
+  .contendor_categoria{
+      display: flex;
+      flex-direction: column;
+      width: 18%;
+  }
+  img{
+      height: 150px;
+      width: 120px
+  }
+  .lista_perros{
+      width: 82%;
+      display: flex;
+      flex-wrap: wrap;
+  }

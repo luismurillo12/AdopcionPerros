@@ -5,6 +5,7 @@ header{
     display: table;
 }
 
+
 menu{
 width: 900px;
 margin: 0 auto;
@@ -35,6 +36,13 @@ margin: 0 auto;
      color: black;
      font-weight: bold;
 
+ }
+ 
+ video{
+    height: 700px;
+    width: 97%;
+    margin-left: 20px
+     
  }
 
  h1{
