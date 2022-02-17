@@ -1,6 +1,13 @@
-
+body{
+    background:url(../videos/fondo.jpg);  
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: Helvetica;
+}
 header{
-    background: #767B7F;
+    background: #5D0978;
     width: 100%;
     clear: both;
     display: table;
@@ -27,7 +34,7 @@ nav{
   }
   nav ul li a{
       text-decoration: none;
-      color: black;
+      color: #E17807;
       font-weight: bold;
  
   }
@@ -49,3 +56,4 @@ nav{
       display: flex;
       flex-wrap: wrap;
   }
+  

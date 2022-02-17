@@ -1,5 +1,13 @@
+body{
+    background:url(../videos/fondo.jpg);
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: Helvetica;
+}
 header{
-    background: #767B7F;
+    background: #5D0978;
     width: 100%;
     clear: both;
     display: table;
@@ -12,21 +20,27 @@ header img{
     padding: 5px;
 }
 nav{
-    float: left;  
+    float: left;
 
- 
-  }
-  
-  nav ul li{
-      list-style: none;
-      margin-left:85px ;
-      padding: 12px 0;
-      float: left;
-      position:relative ;
-  }
-  nav ul li a{
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
- 
-  }
+
+}
+
+nav ul li{
+    list-style: none;
+    margin-left:85px ;
+    padding: 12px 0;
+    float: left;
+    position:relative ;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #E17807;
+    font-weight: bold;
+
+}
+
+.iframe{
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+}
