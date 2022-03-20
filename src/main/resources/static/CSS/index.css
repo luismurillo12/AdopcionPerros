@@ -1,5 +1,5 @@
 body{
-    background:url(../videos/fondo.jpg);  
+    background:url(https://sss.moda.pe/imagen/apaisado/bad-bunny-callaita-5b470.png);  
     margin: 0;
     background-size: cover;
     background-attachment: fixed;
@@ -48,41 +48,4 @@ margin: 0 auto;
  }
  
 
- h1{
-     margin-left:150px ;
-     margin-top: 50px;
-     text-align: center;
- }
-
- .parrafos{
-     margin-left: 200px;
-     text-align: center;
- }
- 
- .titulo_2{
-     margin: 40px;
- }
- .titulo_3{
-     margin: 35px;
- }
- .caja1{
-     margin: 50px;
- }
- .titulo_4{
-     margin: 35px;
- }
- .caja2{
-     margin: 50px;
- }
- .titulo_5{
-     text-align: center;
- }
- 
- .prerequi{
-     margin: 80px;
- 
- }
- .lista_re{
-     margin: 60px;
- }
 

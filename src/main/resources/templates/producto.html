@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head th:replace="plantilla/navbar::head">
+
+        <link rel="stylesheet" href="css/adoptar.css"/>
+
+    </head>
+    <body>
+        <header th:replace="plantilla/navbar::header"></header>
+        <div class="cabezera">
+            <h1>En dog adoption tenemos muchos productos para tu perrito</h1>
+        </div>
+        <div class="contenido">
+            <p>Aqui vas a encontrar una varidad de productos para tu perrito, ya sea
+                alimento, juguetes y cama para ellos </p>
+        </div>
+
+        <h4>Productos</h4>
+
+        <!-- categorias -->
+        <div class="filtros"> 
+
+            <div class="contendor_categoria">
+                <a href="" id="itemCategoria" category="Grande">Grande</a>
+                <a href="" id="itemCategoria" category="mediano">Mediano</a>
+                <a href="" id="itemCategoria" category="pequeño">Peque&#241;o</a>
+            </div>
+
+        </div>
+        <!-- productos -->
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>        
+
+
+        <!-- navegacion -->
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Antes</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
