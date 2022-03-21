@@ -13,6 +13,6 @@ public class LoginController {
 
     @GetMapping({"/prueba"})
     public String prueba() {
-        return "acercade";
+        return "producto";
     }
 }
