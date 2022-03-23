@@ -18,6 +18,11 @@ body {
     text-align: center;
     margin: auto;
 
-
+}
+.titulo_2 {
+    margin-top: 25px;
 }
 
+h1{
+    font-size: 30px;
+}
