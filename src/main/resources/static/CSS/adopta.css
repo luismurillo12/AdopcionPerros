@@ -1,0 +1,37 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 23 mar. 2022, 11:45:44
+    Author     : kmor5
+*/
+.titulo1 {
+    margin-top: 100px;
+    font-size: 22px;
+    text-align: center;
+}
+
+p{
+    margin: auto;
+    width: 1200px;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+.card-text{
+    width: 220px;
+    text-align: left;
+}
+
+.card-img-top{
+    height: 150px;
+}
+
+.card-body{
+    height: 230px;
+}
+.btn-primary{
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
