@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+        <link rel="stylesheet" href="CSS/estilos.css">
+
+
+
+    </head>
+    <body>
+        <form method="POST" th:action="@{/login}" class="formulario">
+
+            <h1>Login</h1>
+            <div class="contenedor">
+
+
+
+                <div class="input-contenedor">
+                    <label  for="username" th:text="#{login.username}"> Nombre de
+                        usuario : </label> <input id="username" name="username" type="text" placeholder="Digite su email ID">
+
+                </div>
+
+                <div class="input-contenedor">
+                   <label  for="password" th:text="#{login.password}">Password : </label> <input
+                                id="password" type="password" name="password" 
+                                 placeholder="Digite su password">
+
+                </div>
+                <input type="button" value="Login" class="button" onclick="location.href = 'home.html';">
+
+
+
+                <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+                <p>¿No tienes una cuenta? <a class="link" href="../static/registro.html">Registrate </a></p>
+
+
+
+            </div>
+        </form>
+
+    </body>
+</html>
