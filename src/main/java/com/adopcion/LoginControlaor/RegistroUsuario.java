@@ -1,36 +1,30 @@
-
- 
 package com.adopcion.LoginControlaor;
 
-import com.adopcion.DTO.UsuarioDTO;
+import com.adopcion.Entity.Usuario;
+import com.adopcion.Service.IUsuarioService;
 import com.adopcion.Service.UsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/registro")
 public class RegistroUsuario {
-    private UsuarioService usuarioService; 
+     @Autowired
+     private IUsuarioService usuarioService; 
 
-    public RegistroUsuario(UsuarioService usuarioService) {
-        this.usuarioService = usuarioService;
+   
+     @GetMapping("/registro")
+    public String crearPersona(Model model) {  
+        model.addAttribute("usuaio", new Usuario());
+        return "registro";
     }
-    @ModelAttribute("usuario")
-    public UsuarioDTO retornarDTO(){
-    return new UsuarioDTO(); 
-    }
-    
-    @GetMapping
-    public String monstrarFormulario(){
-    return "registro";
-    }
-    
-    @PostMapping
-    public String registroCuenta(@ModelAttribute("usuario") UsuarioDTO usuarioDTO){
-    usuarioService.save(usuarioDTO); 
-    return"redirect:registro?exito"; 
+     @PostMapping("/save")
+    public String guardarPersona(@ModelAttribute Usuario usuario) {
+        usuarioService.savePersona(usuario);
+        return"redirect:registro?exito";
     }
 }

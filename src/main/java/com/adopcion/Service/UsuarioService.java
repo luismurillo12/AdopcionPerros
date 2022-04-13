@@ -1,7 +1,4 @@
 package com.adopcion.Service;
-
-import com.adopcion.DTO.UsuarioDTO;
-import com.adopcion.Entity.Rol;
 import com.adopcion.Entity.Usuario;
 import com.adopcion.Repository.UsuarioRepository;
 import java.util.Arrays;
@@ -21,24 +18,24 @@ import org.springframework.stereotype.Service;
 @Service
 public class UsuarioService implements IUsuarioService {
 
-    //@Autowired
-    // private BCryptPasswordEncoder passwordEncoder;
-    private final UsuarioRepository usuarioRerpository;
-
-    public UsuarioService(UsuarioRepository usuarioRerpository) {
-        this.usuarioRerpository = usuarioRerpository;
-    }
+    @Autowired
+    private UsuarioRepository usuarioRepository; 
+   
+     
 
     @Override
     public List<Usuario> listaUsuarios() {
-        return (List<Usuario>) usuarioRerpository.findAll();
+        return (List<Usuario>) usuarioRepository.findAll();
     }
 
     @Override
-    public Usuario save(UsuarioDTO usuarioDTO) {
-        Usuario usuario = new Usuario(usuarioDTO.getNombre(), usuarioDTO.getApellido(), usuarioDTO.getEmail(), usuarioDTO.getPassword(),
-                Arrays.asList(new Rol("Rol_User")));
-        return usuarioRerpository.save(usuario);
+    public int savePersona(Usuario usuario) {
+        int res=0; 
+         Usuario u= usuarioRepository.save(usuario); // aqui se guarda la persona 
+         if (!u.equals(null)) { //que sea diferente a null
+             res=1; 
+         }
+         return res;
     }
 
 }

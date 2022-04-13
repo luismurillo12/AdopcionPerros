@@ -1,28 +1,22 @@
 package com.adopcion.Entity;
 
 import java.io.Serializable;
-import java.util.Collection;
-import javax.annotation.Generated;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import org.hibernate.annotations.ManyToAny;
+
+
 
 @Entity
 @Table(name = "usuarios", uniqueConstraints = @UniqueConstraint(columnNames = "email")) //para decir que mi email va hacer unico
 public class Usuario implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //aunto incrementable
     private Long id;
     @Column(name = "nombre")
     private String nombre;
@@ -30,32 +24,6 @@ public class Usuario implements Serializable {
     private String apellido;
     private String email;
     private String password;
-
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)  //relacion de muchos a muchos en BD
-    @JoinTable(name = "usuario_roles", joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "rol_id", referencedColumnName = "id")
-    )
-    private Collection<Rol> roles;
-
-    public Usuario(Long id, String nombre, String apellido, String email, String password, Collection<Rol> roles) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
-        this.password = password;
-        this.roles = roles;
-    }
-
-    public Usuario(String nombre, String apellido, String email, String password, Collection<Rol> roles) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
-        this.password = password;
-        this.roles = roles;
-    }
-
-    public Usuario() {
-    }
 
     
     public Long getId() {
@@ -98,12 +66,6 @@ public class Usuario implements Serializable {
         this.password = password;
     }
 
-    public Collection<Rol> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Collection<Rol> roles) {
-        this.roles = roles;
-    }
+ 
 
 }
