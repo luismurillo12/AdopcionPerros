@@ -1,4 +1,4 @@
-package com.adopcion.LoginControlaor;
+package com.adopcion.Controller;
 
 import com.adopcion.Service.IUsuarioService;
 import com.adopcion.Service.UsuarioService;

@@ -1,4 +1,5 @@
 package com.adopcion.Service;
+
 import com.adopcion.Entity.Usuario;
 import com.adopcion.Repository.UsuarioRepository;
 import java.util.Arrays;
@@ -19,9 +20,9 @@ import org.springframework.stereotype.Service;
 public class UsuarioService implements IUsuarioService {
 
     @Autowired
-    private UsuarioRepository usuarioRepository; 
-   
-     
+    private UsuarioRepository usuarioRepository;
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
 
     @Override
     public List<Usuario> listaUsuarios() {
@@ -29,13 +30,14 @@ public class UsuarioService implements IUsuarioService {
     }
 
     @Override
-    public int savePersona(Usuario usuario) {
-        int res=0; 
-         Usuario u= usuarioRepository.save(usuario); // aqui se guarda la persona 
-         if (!u.equals(null)) { //que sea diferente a null
-             res=1; 
-         }
-         return res;
+    public Usuario findByNombre(String nombre) {
+        return usuarioRepository.findByNombre(nombre);
+    }
+
+    @Override
+    public Usuario savePersona(Usuario usuario) {
+       usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
+       return usuarioRepository.save(usuario); 
     }
 
 }

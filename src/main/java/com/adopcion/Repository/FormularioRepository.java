@@ -1,12 +1,10 @@
 package com.adopcion.Repository;
 
-import com.adopcion.Entity.Usuario;
-
+import com.adopcion.Entity.Formulario;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UsuarioRepository extends CrudRepository<Usuario, Long>{
-    public Usuario findByNombre(String nombre); 
+public interface FormularioRepository extends CrudRepository<Formulario, Long> {
     
 }
