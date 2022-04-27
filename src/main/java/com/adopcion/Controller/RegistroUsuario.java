@@ -22,7 +22,7 @@ public class RegistroUsuario {
         model.addAttribute("usuaio", new Usuario());
         return "registro";
     }
-     @PostMapping("/save")
+     @PostMapping("/saveUsuario")
     public String guardarPersona(@ModelAttribute Usuario usuario) {
         usuarioService.savePersona(usuario);
         return"redirect:registro?exito";

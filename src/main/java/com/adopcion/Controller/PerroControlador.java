@@ -21,21 +21,21 @@ public class PerroControlador {
     @Autowired
     private IFormularioService formularioService;
 
-    @GetMapping("/adopta")
-    public String index(Model model) {
+    @GetMapping({"/adopta"})
+    public String listaAdopta(Model model) {
         List<Perro> listaPerro = perroService.listaPerro();
         model.addAttribute("perro", listaPerro);
         return "adoptar";
     }
 
-    @GetMapping("/formulario")
-    public String crearPersona(Model model) {
+    @GetMapping("/formularios")
+    public String crearFormulario(Model model) {
         model.addAttribute("personas", new Formulario());
         return "formulario";
     }
 
-    @PostMapping("/save")
-    public String guardarPersona(@ModelAttribute Formulario formulario) {
+    @PostMapping("/saveFormulario")
+    public String guardarFormulario(@ModelAttribute Formulario formulario) {
         formularioService.saveFormulario(formulario);
         return "redirect:/adopta";
     }
